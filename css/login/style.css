@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.page-content h1{
+    font-size: 5.6rem;
+}
+
+.page-content h1 p + p{
+    color: #52b69a;
+}
+
+.page-content {
+    height: 100vh;
+}
+
+main {
+    grid-area: title;
+}
+
+aside{
+    grid-area: login;
+}

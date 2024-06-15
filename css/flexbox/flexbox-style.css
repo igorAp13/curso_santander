@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.boxes {
+    /*height: calc(100vh - (7 * 2rem));*/
+    height: calc(100vh);
+    position: relative;
+    
+    display: flex;
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/   
+    flex-flow: row wrap;
+    /*align-items: center;*/
+    
+}
+
+.box {
+    min-height: 3.0rem;
+    min-width: 5.0rem;
+    padding: 1.5rem;
+    border: 8px solid red;
+    border-radius: 0.4rem;
+    background-color: blue;
+    color: #fff;
+    font-size: 1rem;
+    display: inline-block;
+}

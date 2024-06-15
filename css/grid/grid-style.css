@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    border: 10px solid red;
+    border-radius: 0.4rem;
+    background-color: blue;
+    color: #fff;
+    font-size: 4rem;
+
+    flex: 1;
+
+    display: flex;
+    gap: 0 2rem;
+    justify-content: center;
+    align-content: center;
+}
+
+.box p, button {
+    font-size: 4rem;
+}
+
+.boxes {
+    height: calc(100vh);
+    position: relative;
+
+    display: grid;
+    justify-content: flex-start;
+    gap: 1rem 5rem;
+
+    grid-template-columns: 3fr repeat(2, 1fr);
+}   
