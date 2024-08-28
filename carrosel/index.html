@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Carrosel</title>
+</head>
+<body>
+    <div class="container-slider">
+        <button id="prev-button"><img src="../carrosel/img/arrow.png" alt="prev-button"></button>
+            <div class="container-images">
+                <img src="../carrosel/img/house.jpg" alt="casa" class="slider on">
+                <img src="../carrosel/img/menina.png" alt="menina" class="slider">
+                <img src="../carrosel/img/passaro.png" alt="passaro" class="slider">
+            </div>
+        <button id="next-button"><img src="../carrosel/img/arrow.png" alt="next-button"></button>
+    </div>
+</body>
+<script>
+    const slider = document.querySelectorAll('.slider');
+    const btnPrev = document.getElementById('prev-button');
+    const btnNext = document.getElementById('next-button');
+
+    let currentSlide = 0;
+
+    function hideSlider() {
+        slider.forEach(item => item.classList.remove('on'))
+    }   
+
+    function showSlider() {
+        slider[currentSlide].classList.add('on')
+    }      
+
+    function nextSlider() {
+        hideSlider()
+    if(currentSlide === slider.length -1) {
+        currentSlide = 0
+    } else {
+        currentSlide++
+    }
+    showSlider()
+    }
+
+    function prevSlider() {
+        hideSlider()
+    if(currentSlide === 0) {
+        currentSlide = slider.length -1
+    } else {
+        currentSlide--
+    }
+    showSlider()
+    }
+
+    btnNext.addEventListener('click', nextSlider)
+    btnPrev.addEventListener('click', prevSlider)
+</script>
+</html>
